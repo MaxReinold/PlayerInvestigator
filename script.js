@@ -14,6 +14,9 @@ let statLink = document.getElementById("statLink");
 let steamRepLink = document.getElementById("steamRepLink");
 let forumLink = document.getElementById("forumLink");
 
+let btnDefaultColor = "#0f0f0f";
+let btnClickedColor = "#C9D6EA";
+
 function resetAll(){
   banPage.src = "";
   mutePage.src = "";
@@ -23,6 +26,7 @@ function resetAll(){
   for(let i = 0; i < buttons.length; i++){
     buttons[i].style.display = "none";
     windows[i].style.display = "none";
+    buttons[i].style.backgroundColor = btnDefaultColor;
   }
 }
 
@@ -38,6 +42,7 @@ function searchBtnClick(){
   if(search_field.indexOf("STEAM") != -1){
     searchSteamRep(search_field);
   }
+  return false;
 }
 
 function bansLoaded(){
@@ -110,10 +115,10 @@ function toggleBan(){
   var btn = document.getElementById("banButton");
   if (x.style.display == "block") {
     x.style.display = "none";
-    btn.style.backgroundColor = "#3E4E50";
+    btn.style.backgroundColor = btnDefaultColor;
   } else {
     x.style.display = "block";
-    btn.style.backgroundColor = "#C9D6EA";
+    btn.style.backgroundColor = btnClickedColor;
   }
 }
 
@@ -122,10 +127,10 @@ function toggleMute(){
   var btn = document.getElementById("muteButton");
   if (x.style.display == "block") {
     x.style.display = "none";
-    btn.style.backgroundColor = "#3E4E50";
+    btn.style.backgroundColor = btnDefaultColor;
   } else {
     x.style.display = "block";
-    btn.style.backgroundColor = "#C9D6EA";
+    btn.style.backgroundColor = btnClickedColor;
   }
 }
 
@@ -134,10 +139,10 @@ function toggleStat(){
   var btn = document.getElementById("statButton");
   if (x.style.display == "block") {
     x.style.display = "none";
-    btn.style.backgroundColor = "#3E4E50";
+    btn.style.backgroundColor = btnDefaultColor;
   } else {
     x.style.display = "block";
-    btn.style.backgroundColor = "#C9D6EA";
+    btn.style.backgroundColor = btnClickedColor;
   }
 }
 
@@ -146,10 +151,10 @@ function toggleSteamRep(){
   var btn = document.getElementById("steamRepButton");
   if (x.style.display == "block") {
     x.style.display = "none";
-    btn.style.backgroundColor = "#3E4E50";
+    btn.style.backgroundColor = btnDefaultColor;
   } else {
     x.style.display = "block";
-    btn.style.backgroundColor = "#C9D6EA";
+    btn.style.backgroundColor = btnClickedColor;
   }
 }
 
@@ -158,9 +163,9 @@ function toggleForum(){
   var btn = document.getElementById("forumButton");
   if (x.style.display == "block") {
     x.style.display = "none";
-    btn.style.backgroundColor = "#3E4E50";
+    btn.style.backgroundColor = btnDefaultColor;
   } else {
     x.style.display = "block";
-    btn.style.backgroundColor = "#C9D6EA";
+    btn.style.backgroundColor = btnClickedColor;
   }
 }

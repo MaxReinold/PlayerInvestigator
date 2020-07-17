@@ -9,11 +9,9 @@
   </head>
   <body>
     <div id="content">
-      <div id="titleSection">
-        <h1 style="padding: 5px;">Player Investigation Tool</h1>
-      </div>
+      <h1 style="padding: 5px;">Player Investigation Tool</h1>
       <div id="searchSection">
-        <form class="mainSearchForm" action="index.html" method="post">
+        <form class="mainSearchForm" onsubmit="return searchBtnClick()" autocomplete="off">
           <div id="search_wrapper">
             <input type="text" name="Search" id="search_field" class="searchBar" placeholder="Player Name / ID" size="25">
             <button type="button" name="button" class="searchButton" onclick="searchBtnClick()" id="search_button">
